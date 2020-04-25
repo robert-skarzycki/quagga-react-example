@@ -5,6 +5,15 @@ import Quagga from "quagga";
 function App() {
   return (
     <div className="App">
+      <h1>Quagga React Example</h1>
+      <p>
+        Browser should ask you for access to camera. If you allow it, there
+        should live stream of your camera.
+      </p>
+      <p>
+        Scanner recognizes EAN 13 barcode. Once it is recognized, it will be
+        shown above camera view.
+      </p>
       <QuaggaElement />
     </div>
   );
@@ -60,7 +69,7 @@ const QuaggaElement = () => {
 
   return (
     <div>
-      <h1>{code}</h1>
+      <h2>{code}</h2>
       <div id="interactive" className="viewport" />
     </div>
   );
