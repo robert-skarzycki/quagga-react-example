@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 8
-      - run: npm run build
       - run: npm install -g surge
+      - run: npm run build
+        working-directory: ./src
       - run: surge build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        working-directory: ./src
