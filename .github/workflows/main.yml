@@ -12,7 +12,7 @@ jobs:
       - name: Install surge and fire deployment
         uses: actions/setup-node@v1
         with:
-          node-version: 8
+          node-version: 20
       - run: npm install -g surge
       - run: npm ci
         working-directory: ./src
